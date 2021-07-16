@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header {
+  padding: 20px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #313a5a;
+}
+
+header .navbar > a {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 28px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+header .navbar .hamburger-icon {
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  float: right;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  header .navbar .hamburger-icon {
+    display: none;
+  }
+}
+
+header .navbar .hamburger-icon span {
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  background-color: white;
+}
+
+header .navbar .hamburger-icon span:first-child {
+  top: 0;
+}
+
+header .navbar .hamburger-icon span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .navbar .hamburger-icon span:last-child {
+  bottom: 0;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  header .navbar nav {
+    margin-top: 10px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .navbar nav {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .navbar nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+header .navbar nav a {
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+header .navbar nav a:hover {
+  border-bottom: 1px solid #1fdb84;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  header .navbar .action {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .navbar .action {
+    float: right;
+  }
+}
+
+header .navbar .action a {
+  line-height: 28px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  header .navbar .action a {
+    margin: 10px 0px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .navbar .action a {
+    margin-left: 30px;
+  }
+}
+
+header .navbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.nav-active {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.nav-active .navbar span:first-child {
+  -webkit-transform: rotate(45deg) translate(3px, 9px);
+          transform: rotate(45deg) translate(3px, 9px);
+}
+
+.nav-active .navbar span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-active .navbar span:last-child {
+  -webkit-transform: rotate(-45deg) translate(3px, -9px);
+          transform: rotate(-45deg) translate(3px, -9px);
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .nav-active .navbar nav, .nav-active .navbar .action {
+    display: block;
+  }
+}
+
+.overlay-active {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn {
+  background-color: #1fdb84;
+  color: #ffffff;
+  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  padding: 0px 25px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: inline-block;
+  max-width: 300px;
+  text-align: center;
+}
+
+#hero {
+  background-color: #313a5a;
+  height: 100vh;
+  max-height: 850px;
+}
+/*# sourceMappingURL=style.css.map */

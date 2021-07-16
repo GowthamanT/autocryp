@@ -1,0 +1,24 @@
+@import 
+  'reset',
+  'breakpoints',
+  'color',
+  'utility',
+  'header';
+
+.btn {
+  background-color: $primary-button;
+  color:  $text-white;
+  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  padding:0px 25px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: inline-block;
+  max-width: 300px;
+  text-align: center;
+}
+
+#hero {
+  background-color: $primary-background;
+  height: 100vh;
+  max-height: 850px;
+}

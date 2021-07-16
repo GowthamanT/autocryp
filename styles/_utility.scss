@@ -1,0 +1,12 @@
+// Utility classes
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
