@@ -8,17 +8,88 @@
 .btn {
   background-color: $primary-button;
   color:  $text-white;
-  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-  padding:0px 25px;
+  font-size: 18px;
+  display: inline-block;
+  padding:20px 45px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  display: inline-block;
-  max-width: 300px;
-  text-align: center;
+  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
 }
 
-#hero {
+.content {
+  font-size: 16px;
+  line-height: 2;
+  color: $text-white;
+}
+
+.hero-wrapper {
   background-color: $primary-background;
-  height: 100vh;
-  max-height: 850px;
+  border-top: 1px solid $primary-background;
+  
+  @include media(lg) {
+    height: 100vh;
+    max-height: 850px;
+  }
+  
+  .container {
+    height: 100%; 
+  }
+
+  .hero-content {
+    padding: 30px 0px;
+
+    @include media-between(xs, lg) {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    @include media-between(md, lg) {
+      padding: 30px 20px;
+    }
+
+    @include media(lg) {
+      position: relative;
+      top:50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  .primary-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: $text-white;
+
+    @include media-between(xs, md) {
+      font-size: 35px;
+    }
+  }
+
+  picture {
+    display: block;
+    height: 100%;
+    
+    @include media-between(xs, lg) {
+      margin-top: 30px;
+    }
+    
+    @include media(lg) {
+      width: 50%;
+      float: right;
+      position: relative;
+    }
+  }
+
+  img {
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+    
+    @include media(lg) {
+      height: 85%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }
