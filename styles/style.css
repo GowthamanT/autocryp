@@ -129,6 +129,12 @@ header .navbar .hamburger-icon span:last-child {
   }
 }
 
+@media (min-width: 0) and (max-width: 991px) {
+  header .navbar nav li {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   header .navbar nav li {
     display: inline-block;
