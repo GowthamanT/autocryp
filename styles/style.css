@@ -368,7 +368,7 @@ header .navbar::after {
 
 @media screen and (min-width: 992px) {
   .benefit-wrapper .container {
-    padding: 20px 20px 40px;
+    padding: 20px 40px 40px;
   }
 }
 
