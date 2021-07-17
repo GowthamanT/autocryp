@@ -65,6 +65,10 @@ header {
       }
       
       li {
+        @include media-between(xs, lg) {
+          margin-top: 5px;
+        }
+
         @include media(lg) {
           display: inline-block;
           margin-left: 20px;
