@@ -244,7 +244,7 @@ header .navbar::after {
 .content {
   font-size: 16px;
   line-height: 2;
-  color: #ffffff;
+  color: #5b6c94;
 }
 
 .hero-wrapper {
@@ -303,6 +303,10 @@ header .navbar::after {
   }
 }
 
+.hero-wrapper p {
+  color: #ffffff;
+}
+
 .hero-wrapper picture {
   display: block;
   height: 100%;
@@ -335,5 +339,96 @@ header .navbar::after {
     position: absolute;
     bottom: 0;
   }
+}
+
+.benefit-wrapper {
+  background-color: #f8f9fc;
+}
+
+.benefit-wrapper .container {
+  background-color: #f8f9fc;
+  color: #ffffff;
+  padding: 0px 20px 40px;
+  border-radius: 10px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  position: relative;
+  z-index: 5;
+  -webkit-box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+          box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  border-top: 1px solid #ffffff;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .benefit-wrapper .container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefit-wrapper .container {
+    padding: 20px 20px 40px;
+  }
+}
+
+.benefit-wrapper .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.benefit-wrapper .benefit-content {
+  margin-top: 40px;
+  /** 
+      * From 3 widths total minus will be 60px from 100% / 3.
+      * So that margins for center element is 60px of Margin right and left (30+30).
+    */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .benefit-wrapper .benefit-content {
+    width: 70%;
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefit-wrapper .benefit-content {
+    width: calc(100% / 3 - 20px);
+    float: left;
+    margin-top: 20px;
+  }
+  .benefit-wrapper .benefit-content:nth-child(3n+2) {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+.benefit-wrapper .benefit-content picture {
+  display: inline-block;
+  height: 72px;
+  width: 72px;
+  line-height: 72px;
+  text-align: center;
+  background-color: rgba(31, 219, 132, 0.1);
+  border-radius: 6px;
+}
+
+.benefit-wrapper .benefit-content picture img {
+  vertical-align: middle;
+}
+
+.benefit-wrapper .benefit-content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #031d5b;
+}
+
+.benefit-wrapper .benefit-content span {
+  display: inline-block;
+  height: 4px;
+  width: 60px;
+  background-color: #1fdb84;
 }
 /*# sourceMappingURL=style.css.map */

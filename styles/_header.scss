@@ -13,7 +13,7 @@ header {
       font-weight: 500;
       line-height: 28px;
       display: inline-block;
-      color: $text-white;
+      color: $hero-text;
     }
 
     .hamburger-icon {
@@ -78,11 +78,11 @@ header {
       a {
         font-size: 16px;
         line-height: 28px;
-        color: $text-white;
+        color: $hero-text;
 
         &:hover {
-          color: $primary-button;
-          border-bottom: 1px solid $primary-button;
+          color: $primary-design;
+          border-bottom: 1px solid $primary-design;
         }
       }
     }
@@ -99,7 +99,7 @@ header {
       a {
         line-height: 28px;
         font-size: 16px;
-        color: $text-white;
+        color: $hero-text;
 
         @include media-between(xs, lg) {
           margin: 10px 0px;

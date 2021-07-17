@@ -6,8 +6,8 @@
   'header';
 
 .btn {
-  background-color: $primary-button;
-  color:  $text-white;
+  background-color: $primary-design;
+  color:  $hero-text;
   font-size: 18px;
   display: inline-block;
   padding:20px 45px;
@@ -19,7 +19,7 @@
 .content {
   font-size: 16px;
   line-height: 2;
-  color: $text-white;
+  color: $primary-text;
 }
 
 .hero-wrapper {
@@ -59,11 +59,15 @@
   .primary-heading {
     font-size: 48px;
     font-weight: bold;
-    color: $text-white;
+    color: $hero-text;
 
     @include media-between(xs, md) {
       font-size: 35px;
     }
+  }
+
+  p {
+    color: $hero-text;
   }
 
   picture {
@@ -90,6 +94,92 @@
       height: 85%;
       position: absolute;
       bottom: 0;
+    }
+  }
+}
+
+
+// Benefit Wrapper
+
+.benefit-wrapper {
+  background-color: $body-background;
+  
+  .container {
+    background-color: #f8f9fc;
+    color: $hero-text;
+    padding: 0px 20px 40px;
+    border-radius: 10px;
+    transform: translateY(-50px);
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+    border-top: 1px solid $hero-text;
+
+    @include media-between(xs, lg) {
+      margin-right:20px;
+      margin-left: 20px;
+    } 
+
+    @include media(lg) {
+      padding: 20px 20px 40px;
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+
+  .benefit-content {
+    margin-top: 40px;
+
+    @include media-between(md, lg) {
+      width: 70%;
+      margin: 40px auto 0;
+    }
+
+    /** 
+      * From 3 widths total minus will be 60px from 100% / 3.
+      * So that margins for center element is 60px of Margin right and left (30+30).
+    */
+    @include media(lg) {
+      width: calc(100% / 3 - 20px);
+      float: left;
+      margin-top: 20px;
+
+      &:nth-child(3n+2) {
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    }
+
+
+    picture {
+      display: inline-block;
+      height: 72px;
+      width: 72px;
+      line-height: 72px;
+      text-align: center;
+      background-color: rgba(31, 219, 132, 0.1);
+      border-radius: 6px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $primary-subheading;
+    }
+
+    span {
+      display: inline-block;
+      height: 4px;
+      width: 60px;
+      background-color: $primary-design;
     }
   }
 }
