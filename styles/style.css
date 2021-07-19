@@ -66,7 +66,7 @@ header {
   background-color: #313a5a;
 }
 
-header .navbar > a {
+.navbar > a {
   font-size: 26px;
   font-weight: 500;
   line-height: 28px;
@@ -74,54 +74,15 @@ header .navbar > a {
   color: #ffffff;
 }
 
-header .navbar .hamburger-icon {
-  position: relative;
-  cursor: pointer;
-  width: 25px;
-  height: 20px;
-  float: right;
-  margin-top: 5px;
-}
-
-@media screen and (min-width: 992px) {
-  header .navbar .hamburger-icon {
-    display: none;
-  }
-}
-
-header .navbar .hamburger-icon span {
-  position: absolute;
-  display: inline-block;
-  height: 3px;
-  width: 100%;
-  -webkit-transition: all ease-out 0.3s;
-  transition: all ease-out 0.3s;
-  background-color: white;
-}
-
-header .navbar .hamburger-icon span:first-child {
-  top: 0;
-}
-
-header .navbar .hamburger-icon span:nth-child(2) {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-header .navbar .hamburger-icon span:last-child {
-  bottom: 0;
-}
-
 @media (min-width: 0) and (max-width: 991px) {
-  header .navbar nav {
+  .navbar nav {
     margin-top: 10px;
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) {
-  header .navbar nav {
+  .navbar nav {
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -131,70 +92,120 @@ header .navbar .hamburger-icon span:last-child {
 }
 
 @media (min-width: 0) and (max-width: 991px) {
-  header .navbar nav li {
+  .navbar nav li {
     margin-top: 10px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  header .navbar nav li {
+  .navbar nav li {
     display: inline-block;
     margin-left: 20px;
   }
 }
 
-header .navbar nav a {
+.navbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.nav-link {
   font-size: 16px;
   line-height: 28px;
   color: #ffffff;
 }
 
-header .navbar nav a:hover {
+.nav-link:hover {
   color: #1fdb84;
   border-bottom: 1px solid #1fdb84;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @media (min-width: 0) and (max-width: 991px) {
-  header .navbar .action {
+  .action {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) {
-  header .navbar .action {
+  .action {
     float: right;
   }
 }
 
-header .navbar .action a {
+.action a {
   line-height: 28px;
   font-size: 16px;
   color: #ffffff;
 }
 
 @media (min-width: 0) and (max-width: 991px) {
-  header .navbar .action a {
+  .action a {
     margin: 10px 0px;
     display: block;
   }
 }
 
 @media screen and (min-width: 992px) {
-  header .navbar .action a {
+  .action a {
     margin-left: 30px;
   }
 }
 
-header .navbar .action .btn {
+.action .login:hover {
+  color: #1fdb84;
+  border-bottom: 1px solid #1fdb84;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.action .btn {
   padding: 0px 25px;
   max-width: 300px;
   text-align: center;
+  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
 }
 
-header .navbar::after {
-  content: "";
-  clear: both;
-  display: table;
+.hamburger-icon {
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  float: right;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+.hamburger-icon span {
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  background-color: white;
+}
+
+.hamburger-icon span:first-child {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hamburger-icon span:last-child {
+  bottom: 0;
 }
 
 .nav-active {
@@ -226,8 +237,13 @@ header .navbar::after {
   position: fixed;
   height: 100%;
   width: 100%;
+  z-index: 9;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+.body-fixed {
+  overflow: hidden;
 }
 
 .btn {
@@ -236,10 +252,42 @@ header .navbar::after {
   font-size: 18px;
   display: inline-block;
   padding: 20px 45px;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+          box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.hover-filled-slide-right::after {
+  width: 0;
+  height: 100%;
+  background: #031d5b;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.hover-filled-slide-right:hover {
+  color: white;
+}
+
+.hover-filled-slide-right:hover:after {
+  width: 100%;
 }
 
 .content {

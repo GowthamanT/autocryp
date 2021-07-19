@@ -10,10 +10,42 @@
   color:  $hero-text;
   font-size: 18px;
   display: inline-block;
-  padding:20px 45px;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  padding: 20px 45px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+  position: relative;
+  z-index: 1;
+  transition: all 0.6s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    transition: all 0.6s ease;
+  }
+}
+
+.hover-filled-slide-right {
+  &::after {
+    width: 0;
+    height: 100%;
+    background: $primary-subheading;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 0.6s ease;
+  }
+
+  &:hover {
+    color: white;
+
+    &:after {
+      width: 100%;
+    }
+  }
+  
 }
 
 .content {
