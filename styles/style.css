@@ -370,6 +370,7 @@ header .navbar::after {
 @media screen and (min-width: 992px) {
   .benefit-wrapper .container {
     padding: 20px 40px 40px;
+    font-size: 0;
   }
 }
 
@@ -397,8 +398,10 @@ header .navbar::after {
 @media screen and (min-width: 992px) {
   .benefit-wrapper .benefit-content {
     width: calc(100% / 3 - 20px);
-    float: left;
+    display: inline-block;
     margin-top: 20px;
+    vertical-align: top;
+    font-size: initial;
   }
   .benefit-wrapper .benefit-content:nth-child(3n+2) {
     margin-right: 30px;
