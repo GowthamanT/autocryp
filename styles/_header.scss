@@ -15,9 +15,12 @@ header {
     line-height: 28px;
     display: inline-block;
     color: $hero-text;
+    padding:6px 0px;
   }
 
   nav {
+    padding:6px 0px;
+
     @include media-between(xs, lg) {
       margin-top: 10px;
       display: none;
@@ -94,7 +97,7 @@ header {
   }
 
   .btn {
-    padding: 0px 25px;
+    padding: 6px 25px;
     max-width: 300px;
     text-align: center;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);

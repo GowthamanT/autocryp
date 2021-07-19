@@ -72,6 +72,11 @@ header {
   line-height: 28px;
   display: inline-block;
   color: #ffffff;
+  padding: 6px 0px;
+}
+
+.navbar nav {
+  padding: 6px 0px;
 }
 
 @media (min-width: 0) and (max-width: 991px) {
@@ -162,7 +167,7 @@ header {
 }
 
 .action .btn {
-  padding: 0px 25px;
+  padding: 6px 25px;
   max-width: 300px;
   text-align: center;
   -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
