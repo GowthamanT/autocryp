@@ -5,53 +5,8 @@
   'utility',
   'header';
 
-.btn {
-  background-color: $primary-design;
-  color:  $hero-text;
-  font-size: 18px;
-  display: inline-block;
-  padding: 20px 45px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
-  position: relative;
-  z-index: 1;
-  transition: all 0.6s ease;
-
-  &::after {
-    content: "";
-    position: absolute;
-    transition: all 0.6s ease;
-  }
-}
-
-.hover-filled-slide-right {
-  &::after {
-    width: 0;
-    height: 100%;
-    background: $primary-subheading;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transition: all 0.6s ease;
-  }
-
-  &:hover {
-    color: white;
-
-    &:after {
-      width: 100%;
-    }
-  }
-  
-}
-
-.content {
-  font-size: 16px;
-  line-height: 2;
-  color: $primary-text;
+body {
+  background-color: $body-background;
 }
 
 .hero-wrapper {
@@ -102,6 +57,13 @@
     color: $hero-text;
   }
 
+  .btn {
+    font-size: 18px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+  }
+
   picture {
     display: block;
     height: 100%;
@@ -134,10 +96,8 @@
 // Benefit Wrapper
 
 .benefit-wrapper {
-  background-color: $body-background;
-
   .container {
-    background-color: #f8f9fc;
+    background-color: white;
     color: $hero-text;
     padding: 0px 20px 40px;
     border-radius: 10px;
@@ -154,33 +114,22 @@
 
     @include media(lg) {
       padding: 20px 40px 40px;
-      font-size: 0;
     }
-
-    &::after {
-      content: "";
-      clear: both;
-      display: table;
+  }
+  
+  ul {
+    @include media(lg) {
+      font-size: 0;
     }
   }
 
   .benefit-content {
-    margin-top: 40px;
-
-    @include media-between(md, lg) {
-      width: 70%;
-      margin: 40px auto 0;
-    }
-
     /** 
       * From 3 widths total minus will be 60px from 100% / 3.
       * So that margins for center element is 60px of Margin right and left (30+30).
     */
     @include media(lg) {
       width: calc(100% / 3 - 20px);
-      display: inline-block;
-      margin-top: 20px;
-      vertical-align: top;
       font-size: initial;
 
       &:nth-child(3n+2) {
@@ -215,6 +164,118 @@
       height: 4px;
       width: 60px;
       background-color: $primary-design;
+    }
+  }
+}
+
+.pricing-wrapper {
+  text-align: center;
+
+  h2 {
+    margin-top: 150px;
+    color: $primary-subheading--pricing;
+    font-size: 40px;
+    line-height: 1.6;
+
+    @include media-between(xs, lg) {
+      font-size: 30px;
+    }
+  }
+
+  .pricing-duration-tabs {
+    margin-top: 50px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: $pricing-tab-background;
+    text-transform: uppercase;
+    font-size: 0;
+    
+    a {
+      display: inline-block;
+      padding: 21px 30px;
+      font-size: initial;
+      color: $pricing-tab-text;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border: 1px solid $pricing-tab-border;
+
+      &:hover {
+        background-color: white;
+        color: $primary-design;
+        border:1px solid $primary-design;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    .tab-active {
+      background-color: white;
+      color: $primary-design;
+      border:1px solid $primary-design;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  .pricing-plan-tabs {
+    > ul {
+      @include media(lg) {
+        // font-size: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      > li {
+        // border: 1px solid green;
+        padding: 60px 40px;
+        margin-top: 30px;
+        cursor: pointer;
+        
+        @include media(lg) {
+          // font-size: initial;
+          width: calc(100% / 3);
+        }
+
+        &:hover {
+          background-color: white;
+          border-top: 2px solid $card-border-top;
+          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+        }
+      }
+
+      .plan-tab-active {
+        background-color: white;
+        border-top: 2px solid $card-border-top;
+        box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  .pricing-plan-content { 
+    h3 {
+      color: $primary-subheading--pricing;
+      font-size: 24px;
+      line-height: 1.33;
+      letter-spacing: 0.27px;
+    }
+
+    .cost {
+      font-size: 72px;
+      line-height: 0.89;
+      color: $primary-design;
+
+      @include media-between(xs, lg) {
+        font-size: 50px;
+      }
+    }
+
+    li {
+      margin-top: 10px;
+    }
+
+    .btn {
+      font-size: 16px;
+      text-transform: uppercase;
     }
   }
 }

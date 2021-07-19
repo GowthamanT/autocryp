@@ -58,6 +58,79 @@ figure img {
   margin-top: 40px;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
+.btn {
+  background-color: #1fdb84;
+  color: #ffffff;
+  font-size: 16px;
+  display: inline-block;
+  padding: 20px 45px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.hover-filled-slide-right::after {
+  width: 0;
+  height: 100%;
+  background: #031d5b;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.hover-filled-slide-right:hover {
+  color: white;
+}
+
+.hover-filled-slide-right:hover:after {
+  width: 100%;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 2;
+  color: #5b6c94;
+}
+
+.card {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    width: 70%;
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: top;
+  }
+}
+
 header {
   padding: 20px 0px;
   position: fixed;
@@ -170,8 +243,6 @@ header {
   padding: 6px 25px;
   max-width: 300px;
   text-align: center;
-  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
 }
 
 .hamburger-icon {
@@ -251,54 +322,8 @@ header {
   overflow: hidden;
 }
 
-.btn {
-  background-color: #1fdb84;
-  color: #ffffff;
-  font-size: 18px;
-  display: inline-block;
-  padding: 20px 45px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
-          box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
-  position: relative;
-  z-index: 1;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-}
-
-.hover-filled-slide-right::after {
-  width: 0;
-  height: 100%;
-  background: #031d5b;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-}
-
-.hover-filled-slide-right:hover {
-  color: white;
-}
-
-.hover-filled-slide-right:hover:after {
-  width: 100%;
-}
-
-.content {
-  font-size: 16px;
-  line-height: 2;
-  color: #5b6c94;
+body {
+  background-color: #f8f9fc;
 }
 
 .hero-wrapper {
@@ -361,6 +386,14 @@ header {
   color: #ffffff;
 }
 
+.hero-wrapper .btn {
+  font-size: 18px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+          box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+}
+
 .hero-wrapper picture {
   display: block;
   height: 100%;
@@ -395,12 +428,8 @@ header {
   }
 }
 
-.benefit-wrapper {
-  background-color: #f8f9fc;
-}
-
 .benefit-wrapper .container {
-  background-color: #f8f9fc;
+  background-color: white;
   color: #ffffff;
   padding: 0px 20px 40px;
   border-radius: 10px;
@@ -423,37 +452,25 @@ header {
 @media screen and (min-width: 992px) {
   .benefit-wrapper .container {
     padding: 20px 40px 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .benefit-wrapper ul {
     font-size: 0;
   }
 }
 
-.benefit-wrapper .container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .benefit-wrapper .benefit-content {
-  margin-top: 40px;
   /** 
       * From 3 widths total minus will be 60px from 100% / 3.
       * So that margins for center element is 60px of Margin right and left (30+30).
     */
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .benefit-wrapper .benefit-content {
-    width: 70%;
-    margin: 40px auto 0;
-  }
-}
-
 @media screen and (min-width: 992px) {
   .benefit-wrapper .benefit-content {
     width: calc(100% / 3 - 20px);
-    display: inline-block;
-    margin-top: 20px;
-    vertical-align: top;
     font-size: initial;
   }
   .benefit-wrapper .benefit-content:nth-child(3n+2) {
@@ -487,5 +504,124 @@ header {
   height: 4px;
   width: 60px;
   background-color: #1fdb84;
+}
+
+.pricing-wrapper {
+  text-align: center;
+}
+
+.pricing-wrapper h2 {
+  margin-top: 150px;
+  color: #32325c;
+  font-size: 40px;
+  line-height: 1.6;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .pricing-wrapper h2 {
+    font-size: 30px;
+  }
+}
+
+.pricing-wrapper .pricing-duration-tabs {
+  margin-top: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f1fff8;
+  text-transform: uppercase;
+  font-size: 0;
+}
+
+.pricing-wrapper .pricing-duration-tabs a {
+  display: inline-block;
+  padding: 21px 30px;
+  font-size: initial;
+  color: #6fdeaa;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid #aefdd9;
+}
+
+.pricing-wrapper .pricing-duration-tabs a:hover {
+  background-color: white;
+  color: #1fdb84;
+  border: 1px solid #1fdb84;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.pricing-wrapper .pricing-duration-tabs .tab-active {
+  background-color: white;
+  color: #1fdb84;
+  border: 1px solid #1fdb84;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 992px) {
+  .pricing-wrapper .pricing-plan-tabs > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.pricing-wrapper .pricing-plan-tabs > ul > li {
+  padding: 60px 40px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .pricing-wrapper .pricing-plan-tabs > ul > li {
+    width: calc(100% / 3);
+  }
+}
+
+.pricing-wrapper .pricing-plan-tabs > ul > li:hover {
+  background-color: white;
+  border-top: 2px solid #0a8aff;
+  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+}
+
+.pricing-wrapper .pricing-plan-tabs > ul .plan-tab-active {
+  background-color: white;
+  border-top: 2px solid #0a8aff;
+  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.pricing-wrapper .pricing-plan-content h3 {
+  color: #32325c;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.27px;
+}
+
+.pricing-wrapper .pricing-plan-content .cost {
+  font-size: 72px;
+  line-height: 0.89;
+  color: #1fdb84;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .pricing-wrapper .pricing-plan-content .cost {
+    font-size: 50px;
+  }
+}
+
+.pricing-wrapper .pricing-plan-content li {
+  margin-top: 10px;
+}
+
+.pricing-wrapper .pricing-plan-content .btn {
+  font-size: 16px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
