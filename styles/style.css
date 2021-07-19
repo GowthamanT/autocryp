@@ -532,6 +532,13 @@ body {
   font-size: 0;
 }
 
+@media (min-width: 0) and (max-width: 575px) {
+  .pricing-wrapper .pricing-duration-tabs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .pricing-wrapper .pricing-duration-tabs a {
   display: inline-block;
   padding: 21px 30px;
@@ -541,6 +548,12 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   border: 1px solid #aefdd9;
+}
+
+@media (min-width: 0) and (max-width: 575px) {
+  .pricing-wrapper .pricing-duration-tabs a {
+    margin-top: 10px;
+  }
 }
 
 .pricing-wrapper .pricing-duration-tabs a:hover {

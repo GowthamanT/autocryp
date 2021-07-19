@@ -189,6 +189,11 @@ body {
     background-color: $pricing-tab-background;
     text-transform: uppercase;
     font-size: 0;
+
+    @include media-between(xs, sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     
     a {
       display: inline-block;
@@ -199,6 +204,10 @@ body {
       font-weight: bold;
       letter-spacing: 2px;
       border: 1px solid $pricing-tab-border;
+
+      @include media-between(xs, sm) {
+        margin-top: 10px;
+      }
 
       &:hover {
         background-color: white;
