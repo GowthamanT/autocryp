@@ -29,15 +29,21 @@ function closeNavbar() {
 var monthPlan = document.querySelector('.monthly');
 var yearPlan = document.querySelector('.yearly');
 var pricingTabs = document.querySelectorAll('.pricing-tabs');
-console.log(pricingTabs);
+// console.log(pricingTabs);
 
-monthPlan.addEventListener('click',activePricePlan);
-yearPlan.addEventListener('click',activePricePlan);
+monthPlan.addEventListener('click',activateMonthlyPlan);
+yearPlan.addEventListener('click',activateYearlyPlan);
 
-function activePricePlan() {
-  monthPlan.classList.toggle('pricing-plan-active');
-  yearPlan.classList.toggle('pricing-plan-active');
-  pricingTabs.forEach(plans => {
-    plans.classList.toggle('pricing-tab-active');
-  });
+function activateMonthlyPlan() {
+  monthPlan.classList.add('pricing-plan-active');
+  yearPlan.classList.remove('pricing-plan-active');
+  pricingTabs[0].classList.add('pricing-tab-active');
+  pricingTabs[1].classList.remove('pricing-tab-active');
+}
+
+function activateYearlyPlan() {
+  monthPlan.classList.remove('pricing-plan-active');
+  yearPlan.classList.add('pricing-plan-active');
+  pricingTabs[0].classList.remove('pricing-tab-active');
+  pricingTabs[1].classList.add('pricing-tab-active');
 }
