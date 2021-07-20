@@ -17,6 +17,10 @@
 .mt-40 { margin-top: 40px; }
 .mt-50 { margin-top: 50px; }
 
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+
 .btn {
   background-color: $primary-design;
   color:  $hero-text;
@@ -63,19 +67,4 @@
   font-size: 16px;
   line-height: 2;
   color: $primary-text;
-}
-
-.card {
-  margin-top: 40px;
-
-  @include media-between(md, lg) {
-    width: 70%;
-    margin: 40px auto 0;
-  }
-
-  @include media(lg) {
-    display: inline-block;
-    margin-top: 20px;
-    vertical-align: top;
-  }
 }

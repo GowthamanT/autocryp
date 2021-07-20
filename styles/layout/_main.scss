@@ -3,9 +3,14 @@ body {
   background-color: $body-background;
 }
 
+// Hero Section
+
 .hero-wrapper {
   background-color: $primary-background;
-  border-top: 1px solid $primary-background;
+  
+  @include media-between(xs, lg) {
+    padding-top: 150px;
+  }
 
   @include media(lg) {
     height: 100vh;
@@ -15,62 +20,59 @@ body {
   .container {
     height: 100%; 
   }
+}
 
-  .hero-content {
-    padding: 30px 0px;
 
-    @include media-between(xs, lg) {
-      margin-top: 100px;
-      text-align: center;
-    }
-
-    @include media-between(md, lg) {
-      padding: 30px 20px;
-    }
-
-    @include media(lg) {
-      position: relative;
-      top:50%;
-      transform: translateY(-50%);
-      display: inline-block;
-      width: 50%;
-    }
+.hero-content {
+  @include media-between(xs, lg) {
+    text-align: center;
   }
 
-  .primary-heading {
-    font-size: 48px;
-    font-weight: bold;
-    color: $hero-text;
-
-    @include media-between(xs, md) {
-      font-size: 35px;
-    }
+  @include media(lg) {
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 50%;
   }
 
   p {
     color: $hero-text;
   }
+}
 
-  .btn {
-    font-size: 18px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+
+.primary-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: $hero-text;
+
+  @include media-between(xs, md) {
+    font-size: 35px;
   }
+}
 
-  picture {
-    display: block;
-    height: 100%;
-    
-    @include media-between(xs, lg) {
-      margin-top: 30px;
-    }
-    
-    @include media(lg) {
-      width: 50%;
-      float: right;
-      position: relative;
-    }
+
+.btn-primary {
+  font-size: 18px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+}
+
+
+.hero-img {
+  display: block;
+  height: 100%;
+  
+  @include media-between(xs, lg) {
+    margin-top: 30px;
+  }
+  
+  @include media(lg) {
+    width: 50%;
+    float: right;
+    position: relative;
   }
 
   img {
@@ -87,13 +89,17 @@ body {
 }
 
 
+
+
+
+
 // Benefit Wrapper
 
 .benefit-wrapper {
   .container {
     background-color: white;
     color: $hero-text;
-    padding: 0px 20px 40px;
+    padding: 20px 40px 40px;
     border-radius: 10px;
     transform: translateY(-50px);
     position: relative;
@@ -104,69 +110,82 @@ body {
     @include media-between(xs, lg) {
       margin-right:20px;
       margin-left: 20px;
+      padding: 20px 20px 40px;
     } 
+  }
+}
 
-    @include media(lg) {
-      padding: 20px 40px 40px;
+
+.benefit-content {
+  margin-top: 20px;
+  overflow-wrap: break-word;
+
+  /** 
+   * 48px is the combination of margin rights of two children (20 + 20)
+   * and 8px of inline block whitespace between elements.
+   */
+  @include media(lg) {
+    display: inline-block;
+    vertical-align: top;
+    width: calc((100% - 48px) / 3);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 20px;
     }
   }
-  
-  ul {
-    @include media(lg) {
-      font-size: 0;
-    }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-subheading;
   }
 
-  .benefit-content {
-    /** 
-      * From 3 widths total minus will be 60px from 100% / 3.
-      * So that margins for center element is 60px of Margin right and left (30+30).
-    */
-    @include media(lg) {
-      width: calc(100% / 3 - 20px);
-      font-size: initial;
+  p {
+    margin-top: 20px;
 
-      &:nth-child(3n+2) {
-        margin-right: 30px;
-        margin-left: 30px;
-      }
-    }
-
-
-    picture {
-      display: inline-block;
-      height: 72px;
-      width: 72px;
-      line-height: 72px;
-      text-align: center;
-      background-color: rgba(31, 219, 132, 0.1);
-      border-radius: 6px;
-
-      img {
-        vertical-align: middle;
-      }
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-      color: $primary-subheading;
-    }
-
-    span {
-      display: inline-block;
-      height: 4px;
-      width: 60px;
-      background-color: $primary-design;
+    @include media-between(xs, lg) {
+      margin-bottom: 20px;
     }
   }
 }
 
+
+.benefit-icon {
+  height: 72px;
+  width: 72px;
+  line-height: 42px;
+  text-align: center;
+  background-color: rgba(31, 219, 132, 0.1);
+  border-radius: 6px;
+  padding: 15px 20px;
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+
+.benefit-divider {
+  display: inline-block;
+  height: 4px;
+  width: 60px;
+  background-color: $primary-design;
+}
+
+
+
+
+
+
+// Pricing Section
+
 .pricing-wrapper {
+  padding-top: 150px;
+  padding-bottom: 150px;
   text-align: center;
 
   h2 {
-    margin-top: 150px;
     color: $primary-subheading--pricing;
     font-size: 40px;
     line-height: 1.6;
@@ -175,110 +194,140 @@ body {
       font-size: 30px;
     }
   }
+}
 
-  .pricing-duration-tabs {
-    margin-top: 50px;
+
+.pricing-plan {
+  margin-top: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: $pricing-tab-background;
+  text-transform: uppercase;
+  font-size: 0;
+
+  @include media-between(xs, sm) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  a {
     display: inline-block;
-    border-radius: 5px;
-    background-color: $pricing-tab-background;
-    text-transform: uppercase;
-    font-size: 0;
+    padding: 21px 30px;
+    color: $pricing-tab-text;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 1px solid $pricing-tab-border;
 
     @include media-between(xs, sm) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    
-    a {
-      display: inline-block;
-      padding: 21px 30px;
-      font-size: initial;
-      color: $pricing-tab-text;
-      font-size: 16px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      border: 1px solid $pricing-tab-border;
-
-      @include media-between(xs, sm) {
-        margin-top: 10px;
-      }
-
-      &:hover {
-        background-color: white;
-        color: $primary-design;
-        border:1px solid $primary-design;
-        transition: all 0.3s ease-out;
-      }
+      margin-top: 10px;
     }
 
-    .tab-active {
+    &:hover {
       background-color: white;
       color: $primary-design;
       border:1px solid $primary-design;
       transition: all 0.3s ease-out;
     }
   }
+}
 
-  .pricing-plan-tabs {
-    > ul {
-      @include media(lg) {
-        // font-size: 0;
-        display: flex;
-        flex-wrap: wrap;
-      }
 
-      > li {
-        // border: 1px solid green;
-        padding: 60px 40px;
-        margin-top: 30px;
-        cursor: pointer;
-        
-        @include media(lg) {
-          // font-size: initial;
-          width: calc(100% / 3);
-        }
+.pricing-plan-active {
+  background-color: white;
+  color: $primary-design;
+  border:1px solid $primary-design;
+  transition: all 0.3s ease-out;
+}
 
-        &:hover {
-          background-color: white;
-          border-top: 2px solid $card-border-top;
-          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-        }
-      }
 
-      .plan-tab-active {
-        background-color: white;
-        border-top: 2px solid $card-border-top;
-        box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-        transition: all 0.5s ease;
-      }
+.pricing-tabs {
+  padding-top: 20px;
+  display: none;
+
+  > ul {
+    @include media(lg) {
+      font-size: 0;
     }
   }
+}
 
-  .pricing-plan-content { 
-    h3 {
-      color: $primary-subheading--pricing;
-      font-size: 24px;
-      line-height: 1.33;
-      letter-spacing: 0.27px;
-    }
+.pricing-card { 
+  display: inline-block;
+  padding: 60px 40px;
+  margin-top: 30px;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: initial;
+  overflow-wrap: break-word;
 
+  h3 {
+    color: $primary-subheading--pricing;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.27px;
+  }
+
+  li {
+    margin-top: 10px;
+  }
+
+  .btn {
+    text-transform: uppercase;
+  }
+
+  @include media(lg) {
+    width: calc(100% / 3);
+  }
+
+  &:hover {
+    background-color: white;
+    border-top: 2px solid $card-border-top;
+    box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  }
+}
+
+.cost {
+  font-size: 72px;
+  line-height: 0.89;
+  color: $primary-design;
+
+  @include media-between(xs, lg) {
+    font-size: 50px;
+  }
+}
+
+.pricing-card-active {
+  background-color: white;
+  border-top: 2px solid $card-border-top;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  transition: all 0.5s ease;
+}
+
+.yearly-offer {
+  p {
+    font-size: 22px;
+    line-height: 0.89;
+    color: $primary-text;
+  }
+}
+
+.pricing-yearly {
+  .pricing-card {
     .cost {
-      font-size: 72px;
-      line-height: 0.89;
-      color: $primary-design;
-
-      @include media-between(xs, lg) {
-        font-size: 50px;
-      }
+      font-size: 62px;
     }
 
-    li {
-      margin-top: 10px;
-    }
-
-    .btn {
-      font-size: 16px;
-      text-transform: uppercase;
+    &:hover {
+      border-top: 2px solid pink;
     }
   }
+
+  .pricing-card-active {
+    border-top: 2px solid pink;
+  }
+}
+
+.pricing-tab-active {
+  display: block;
 }

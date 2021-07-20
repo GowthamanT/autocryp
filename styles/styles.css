@@ -62,6 +62,18 @@ figure img {
   margin-top: 50px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 .btn {
   background-color: #1fdb84;
   color: #ffffff;
@@ -112,25 +124,6 @@ figure img {
   color: #5b6c94;
 }
 
-.card {
-  margin-top: 40px;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .card {
-    width: 70%;
-    margin: 40px auto 0;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card {
-    display: inline-block;
-    margin-top: 20px;
-    vertical-align: top;
-  }
-}
-
 header {
   padding: 20px 0px;
   position: fixed;
@@ -142,14 +135,9 @@ header {
 .navbar > a {
   font-size: 26px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 40px;
   display: inline-block;
   color: #ffffff;
-  padding: 6px 0px;
-}
-
-.navbar nav {
-  padding: 6px 0px;
 }
 
 @media (min-width: 0) and (max-width: 991px) {
@@ -169,28 +157,33 @@ header {
   }
 }
 
-@media (min-width: 0) and (max-width: 991px) {
-  .navbar nav li {
-    margin-top: 10px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar nav li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-}
-
 .navbar::after {
   content: "";
   clear: both;
   display: table;
 }
 
+@media (min-width: 0) and (max-width: 991px) {
+  .primary-nav li {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .primary-nav li {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .primary-nav li:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
 .nav-link {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 40px;
   color: #ffffff;
 }
 
@@ -328,7 +321,12 @@ body {
 
 .hero-wrapper {
   background-color: #313a5a;
-  border-top: 1px solid #313a5a;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .hero-wrapper {
+    padding-top: 150px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -342,25 +340,14 @@ body {
   height: 100%;
 }
 
-.hero-wrapper .hero-content {
-  padding: 30px 0px;
-}
-
 @media (min-width: 0) and (max-width: 991px) {
-  .hero-wrapper .hero-content {
-    margin-top: 100px;
+  .hero-content {
     text-align: center;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero-wrapper .hero-content {
-    padding: 30px 20px;
-  }
-}
-
 @media screen and (min-width: 992px) {
-  .hero-wrapper .hero-content {
+  .hero-content {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -370,23 +357,23 @@ body {
   }
 }
 
-.hero-wrapper .primary-heading {
+.hero-content p {
+  color: #ffffff;
+}
+
+.primary-heading {
   font-size: 48px;
   font-weight: bold;
   color: #ffffff;
 }
 
 @media (min-width: 0) and (max-width: 767px) {
-  .hero-wrapper .primary-heading {
+  .primary-heading {
     font-size: 35px;
   }
 }
 
-.hero-wrapper p {
-  color: #ffffff;
-}
-
-.hero-wrapper .btn {
+.btn-primary {
   font-size: 18px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -394,26 +381,26 @@ body {
           box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
 }
 
-.hero-wrapper picture {
+.hero-img {
   display: block;
   height: 100%;
 }
 
 @media (min-width: 0) and (max-width: 991px) {
-  .hero-wrapper picture {
+  .hero-img {
     margin-top: 30px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .hero-wrapper picture {
+  .hero-img {
     width: 50%;
     float: right;
     position: relative;
   }
 }
 
-.hero-wrapper img {
+.hero-img img {
   height: 50vh;
   width: 100%;
   -o-object-fit: contain;
@@ -421,7 +408,7 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .hero-wrapper img {
+  .hero-img img {
     height: 85%;
     position: absolute;
     bottom: 0;
@@ -431,7 +418,7 @@ body {
 .benefit-wrapper .container {
   background-color: white;
   color: #ffffff;
-  padding: 0px 20px 40px;
+  padding: 20px 40px 40px;
   border-radius: 10px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -446,60 +433,62 @@ body {
   .benefit-wrapper .container {
     margin-right: 20px;
     margin-left: 20px;
+    padding: 20px 20px 40px;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .benefit-wrapper .container {
-    padding: 20px 40px 40px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .benefit-wrapper ul {
-    font-size: 0;
-  }
-}
-
-.benefit-wrapper .benefit-content {
+.benefit-content {
+  margin-top: 20px;
+  overflow-wrap: break-word;
   /** 
-      * From 3 widths total minus will be 60px from 100% / 3.
-      * So that margins for center element is 60px of Margin right and left (30+30).
-    */
+   * 48px is the combination of margin rights of two children (20 + 20)
+   * and 8px of inline block whitespace between elements.
+   */
 }
 
 @media screen and (min-width: 992px) {
-  .benefit-wrapper .benefit-content {
-    width: calc(100% / 3 - 20px);
-    font-size: initial;
+  .benefit-content {
+    display: inline-block;
+    vertical-align: top;
+    width: calc((100% - 48px) / 3);
   }
-  .benefit-wrapper .benefit-content:nth-child(3n+2) {
-    margin-right: 30px;
-    margin-left: 30px;
+  .benefit-content:not(:nth-child(3n)) {
+    margin-right: 20px;
   }
 }
 
-.benefit-wrapper .benefit-content picture {
-  display: inline-block;
-  height: 72px;
-  width: 72px;
-  line-height: 72px;
-  text-align: center;
-  background-color: rgba(31, 219, 132, 0.1);
-  border-radius: 6px;
-}
-
-.benefit-wrapper .benefit-content picture img {
-  vertical-align: middle;
-}
-
-.benefit-wrapper .benefit-content h2 {
+.benefit-content h2 {
   font-size: 18px;
   font-weight: 500;
   color: #031d5b;
 }
 
-.benefit-wrapper .benefit-content span {
+.benefit-content p {
+  margin-top: 20px;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .benefit-content p {
+    margin-bottom: 20px;
+  }
+}
+
+.benefit-icon {
+  height: 72px;
+  width: 72px;
+  line-height: 42px;
+  text-align: center;
+  background-color: rgba(31, 219, 132, 0.1);
+  border-radius: 6px;
+  padding: 15px 20px;
+}
+
+.benefit-icon img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.benefit-divider {
   display: inline-block;
   height: 4px;
   width: 60px;
@@ -507,11 +496,12 @@ body {
 }
 
 .pricing-wrapper {
+  padding-top: 150px;
+  padding-bottom: 150px;
   text-align: center;
 }
 
 .pricing-wrapper h2 {
-  margin-top: 150px;
   color: #32325c;
   font-size: 40px;
   line-height: 1.6;
@@ -523,7 +513,7 @@ body {
   }
 }
 
-.pricing-wrapper .pricing-duration-tabs {
+.pricing-plan {
   margin-top: 50px;
   display: inline-block;
   border-radius: 5px;
@@ -533,16 +523,15 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 575px) {
-  .pricing-wrapper .pricing-duration-tabs {
+  .pricing-plan {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
 
-.pricing-wrapper .pricing-duration-tabs a {
+.pricing-plan a {
   display: inline-block;
   padding: 21px 30px;
-  font-size: initial;
   color: #6fdeaa;
   font-size: 16px;
   font-weight: bold;
@@ -551,12 +540,12 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 575px) {
-  .pricing-wrapper .pricing-duration-tabs a {
+  .pricing-plan a {
     margin-top: 10px;
   }
 }
 
-.pricing-wrapper .pricing-duration-tabs a:hover {
+.pricing-plan a:hover {
   background-color: white;
   color: #1fdb84;
   border: 1px solid #1fdb84;
@@ -564,44 +553,76 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.pricing-wrapper .pricing-duration-tabs .tab-active {
+.pricing-plan-active {
   background-color: white;
   color: #1fdb84;
   border: 1px solid #1fdb84;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+.pricing-tabs {
+  padding-top: 20px;
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
-  .pricing-wrapper .pricing-plan-tabs > ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .pricing-tabs > ul {
+    font-size: 0;
   }
 }
 
-.pricing-wrapper .pricing-plan-tabs > ul > li {
+.pricing-card {
+  display: inline-block;
   padding: 60px 40px;
   margin-top: 30px;
+  vertical-align: top;
   cursor: pointer;
+  font-size: initial;
+  overflow-wrap: break-word;
+}
+
+.pricing-card h3 {
+  color: #32325c;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.27px;
+}
+
+.pricing-card li {
+  margin-top: 10px;
+}
+
+.pricing-card .btn {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 992px) {
-  .pricing-wrapper .pricing-plan-tabs > ul > li {
+  .pricing-card {
     width: calc(100% / 3);
   }
 }
 
-.pricing-wrapper .pricing-plan-tabs > ul > li:hover {
+.pricing-card:hover {
   background-color: white;
   border-top: 2px solid #0a8aff;
   -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
           box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
 }
 
-.pricing-wrapper .pricing-plan-tabs > ul .plan-tab-active {
+.cost {
+  font-size: 72px;
+  line-height: 0.89;
+  color: #1fdb84;
+}
+
+@media (min-width: 0) and (max-width: 991px) {
+  .cost {
+    font-size: 50px;
+  }
+}
+
+.pricing-card-active {
   background-color: white;
   border-top: 2px solid #0a8aff;
   -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
@@ -610,31 +631,25 @@ body {
   transition: all 0.5s ease;
 }
 
-.pricing-wrapper .pricing-plan-content h3 {
-  color: #32325c;
-  font-size: 24px;
-  line-height: 1.33;
-  letter-spacing: 0.27px;
-}
-
-.pricing-wrapper .pricing-plan-content .cost {
-  font-size: 72px;
+.yearly-offer p {
+  font-size: 22px;
   line-height: 0.89;
-  color: #1fdb84;
+  color: #5b6c94;
 }
 
-@media (min-width: 0) and (max-width: 991px) {
-  .pricing-wrapper .pricing-plan-content .cost {
-    font-size: 50px;
-  }
+.pricing-yearly .pricing-card .cost {
+  font-size: 62px;
 }
 
-.pricing-wrapper .pricing-plan-content li {
-  margin-top: 10px;
+.pricing-yearly .pricing-card:hover {
+  border-top: 2px solid pink;
 }
 
-.pricing-wrapper .pricing-plan-content .btn {
-  font-size: 16px;
-  text-transform: uppercase;
+.pricing-yearly .pricing-card-active {
+  border-top: 2px solid pink;
+}
+
+.pricing-tab-active {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */

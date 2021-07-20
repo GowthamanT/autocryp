@@ -11,15 +11,12 @@ header {
   > a {
     font-size: 26px;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 40px;
     display: inline-block;
     color: $hero-text;
-    padding:6px 0px;
   }
 
   nav {
-    padding:6px 0px;
-
     @include media-between(xs, lg) {
       margin-top: 10px;
       display: none;
@@ -31,17 +28,6 @@ header {
       left: 50%;
       transform: translateX(-50%);
     }
-    
-    li {
-      @include media-between(xs, lg) {
-        margin-top: 10px;
-      }
-
-      @include media(lg) {
-        display: inline-block;
-        margin-left: 20px;
-      }
-    }
   }
 
   &::after {
@@ -51,9 +37,27 @@ header {
   }
 }
 
+.primary-nav {
+  li {
+    @include media-between(xs, lg) {
+      margin-top: 10px;
+    }
+
+    @include media(lg) {
+      display: inline-block;
+    }
+
+    &:not(:first-child) {
+      @include media(lg) {
+        margin-left: 20px;
+      } 
+    }
+  }
+}
+
 .nav-link {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 40px;
   color: $hero-text;
 
   &:hover {

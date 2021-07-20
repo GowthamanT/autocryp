@@ -21,5 +21,23 @@ function showHideNavbar() {
 function closeNavbar() {
   header.classList.remove('nav-active');
   overlay.classList.remove('overlay-active');
-  body.classList.toggle('body-fixed');
+  body.classList.remove('body-fixed');
+}
+
+// Pricing Tab
+
+var monthPlan = document.querySelector('.monthly');
+var yearPlan = document.querySelector('.yearly');
+var pricingTabs = document.querySelectorAll('.pricing-tabs');
+console.log(pricingTabs);
+
+monthPlan.addEventListener('click',activePricePlan);
+yearPlan.addEventListener('click',activePricePlan);
+
+function activePricePlan() {
+  monthPlan.classList.toggle('pricing-plan-active');
+  yearPlan.classList.toggle('pricing-plan-active');
+  pricingTabs.forEach(plans => {
+    plans.classList.toggle('pricing-tab-active');
+  });
 }

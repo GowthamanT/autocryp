@@ -32,7 +32,7 @@
         <span></span>
       </div>
       <nav>
-        <ul>
+        <ul class="primary-nav">
           <li>
             <a href="#benefit" class="nav-link">Benefit</a>
           </li>
@@ -66,11 +66,11 @@
           <p class="content mt-40">
             Autocryp is the place to buy and sell Bitcoin, Ethereum and various kinds of Digital Assets in Indonesia. Then, book your weekly, bi-weekly or one-off clean online with imminent confirmation.
           </p>
-          <a href="javascript:;" class="btn mt-40 hover-filled-slide-right">Get Started</a>
+          <a href="javascript:;" class="btn btn-primary mt-40">Get Started</a>
         </div>
-        <picture class="">
+        <figure class="hero-img">
           <img src="assets/images/hero.png" alt="hero background" srcset="assets/images/hero@2x.png 2x, assets/images/hero@3x.png 3x">
-        </picture> 
+        </figu> 
       </div>
     </section>
 
@@ -78,41 +78,41 @@
     <section class="benefit-wrapper">
       <div class="container" id="benefit">
         <ul>
-          <li class="benefit-content card">
-            <picture>
+          <li class="benefit-content">
+            <figure class="benefit-icon">
               <img src="assets/icons/vault.svg" alt="Secure Every Transaction Icon">
-            </picture>
+            </figure>
             <h2 class="mt-30">
               Secure Every Transaction
             </h2>
-            <span class="mt-30"></span>
-            <p class="content mt-20">
+            <span class="benefit-divider mt-30"></span>
+            <p class="content">
               Your account is protected by Multifactor Authentication using a combination of email, SMS and Google Authenticator.
             </p>
           </li>
   
-          <li class="benefit-content card">
-            <picture>
+          <li class="benefit-content">
+            <figure class="benefit-icon">
               <img src="assets/icons/easiest_use.svg" alt="Easiest to Use Icon">
-            </picture>
+            </figure>
             <h2 class="mt-30">
               Easiest To Use
             </h2>
-            <span class="mt-30"></span>
-            <p class="content mt-20">
+            <span class="benefit-divider mt-30"></span>
+            <p class="content">
               You only need 1 account to do all Bitcoin transactions whether it is buying, selling, investing or trading.
             </p>
           </li>
   
-          <li class="benefit-content card">
-            <picture>
+          <li class="benefit-content">
+            <figure class="benefit-icon">
               <img src="assets/icons/airballon.svg" alt="Fastest Mining Icon">
-            </picture>
+            </figure>
             <h2 class="mt-30">
               Fastest Mining
             </h2>
-            <span class="mt-30"></span>
-            <p class="content mt-20">
+            <span class="benefit-divider mt-30"></span>
+            <p class="content">
               The Rupiah deposit can be processed instantly and Rupiah withdrawal is processed in less than 1 business day.
             </p>
           </li>
@@ -126,14 +126,16 @@
         <h2>
           Paid plan starts with a 7-day free trial,<br> No credit card required
         </h2>
-        <div class="pricing-plans">
-          <div class="pricing-duration-tabs">
-            <a href="#monthly-plans" class="tab-active">Monthly</a>
-            <a href="#yearly-plans">Yearly - 2 Month Free</a>
+        <div>
+          <div class="pricing-plan">
+            <a href="#monthly-plans" class="monthly pricing-plan-active">Monthly</a>
+            <a href="#yearly-plans" class="yearly">Yearly - 2 Month Free</a>
           </div>
-          <div class="pricing-plan-tabs mt-20">
-            <ul id="monthly-plans">
-              <li class="pricing-plan-content">
+
+          <!-- Monthly -->
+          <div class="pricing-tabs pricing-tab-active" id="monthly-plans">
+            <ul>
+              <li class="pricing-card">
                 <h3>
                   Starter
                 </h3>
@@ -154,7 +156,7 @@
                 <a href="javascript:;" class="btn mt-50 hover-filled-slide-right">Start Free Trail</a>
               </li>
 
-              <li class="pricing-plan-content plan-tab-active">
+              <li class="pricing-card pricing-card-active">
                 <h3>
                   Professional
                 </h3>
@@ -178,12 +180,90 @@
                 <a href="javascript:;" class="btn mt-50 hover-filled-slide-right">Start Free Trail</a>
               </li>
 
-              <li class="pricing-plan-content">
+              <li class="pricing-card">
                 <h3>
                   Business
                 </h3>
                 <p class="cost mt-30">$49</p>
                 <p class="content mt-10">Per Month</p>
+
+                <ul class="content mt-50">
+                  <li>
+                    Unlimited Pixels ID
+                  </li>
+                  <li>
+                    Unlimited Custom URL
+                  </li>
+                  <li>
+                    Unlimited shortened links / month
+                  </li>
+                  <li>
+                    Unlimited Member
+                  </li>
+                </ul>
+                <a href="javascript:;" class="btn mt-50 hover-filled-slide-right">Start Free Trail</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Yearly -->
+          <div class="pricing-tabs pricing-yearly" id="yearly-plans">
+            <div class="yearly-offer mt-50">
+              <p>Start your yearly subscription Free for 2 years</p>
+              <a href="javascript:;" class="btn mt-30">Start your Pack</a>
+            </div>
+            <ul class="mt-20">
+              <li class="pricing-card">
+                <h3>
+                  Starter
+                </h3>
+                <p class="cost mt-30">$1000</p>
+                <p class="content mt-10">Per Year</p>
+
+                <ul class="content mt-50">
+                  <li>
+                    1 Pixel ID*
+                  </li>
+                  <li>
+                    URL
+                  </li>
+                  <li>
+                    Up to 200 shortened links / month
+                  </li>
+                </ul>
+                <a href="javascript:;" class="btn mt-50 hover-filled-slide-right">Start Free Trail</a>
+              </li>
+
+              <li class="pricing-card pricing-card-active">
+                <h3>
+                  Professional
+                </h3>
+                <p class="cost mt-30">$2900</p>
+                <p class="content mt-10">Per Year</p>
+
+                <ul class="content mt-50">
+                  <li>
+                    5 Pixel ID*
+                  </li>
+                  <li>
+                    1 Custom URL
+                  </li>
+                  <li>
+                    Up to 1,000 shortened links / month
+                  </li>
+                  <li>
+                    5 Team Member
+                  </li>
+                </ul>
+                <a href="javascript:;" class="btn mt-50 hover-filled-slide-right">Start Free Trail</a>
+              </li>
+
+              <li class="pricing-card">
+                <h3>
+                  Business
+                </h3>
+                <p class="cost mt-30">$4900</p>
+                <p class="content mt-10">Per Year</p>
 
                 <ul class="content mt-50">
                   <li>
