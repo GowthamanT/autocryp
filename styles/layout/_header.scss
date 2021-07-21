@@ -7,26 +7,20 @@ header {
   background-color: $primary-background;
 }
 
+
 .navbar {
-  > a {
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 40px;
-    display: inline-block;
-    color: $hero-text;
+  @include media(lg) {
+    text-align: center;
   }
 
   nav {
-    @include media-between(xs, lg) {
+    @include media-upto(lg) {
       margin-top: 10px;
       display: none;
     }
 
     @include media(lg) {
       display: inline-block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 
@@ -37,23 +31,31 @@ header {
   }
 }
 
-.primary-nav {
-  li {
-    @include media-between(xs, lg) {
-      margin-top: 10px;
-    }
 
-    @include media(lg) {
-      display: inline-block;
-    }
+.company-logo {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 40px;
+  color: $hero-text;
 
-    &:not(:first-child) {
-      @include media(lg) {
-        margin-left: 20px;
-      } 
-    }
+  @include media(lg) {
+    float: left;
   }
 }
+
+
+.primary-nav {
+  li {
+    @include media(lg) {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    } 
+  }
+}
+
 
 .nav-link {
   font-size: 16px;
@@ -63,12 +65,13 @@ header {
   &:hover {
     color: $primary-design;
     border-bottom: 1px solid $primary-design;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
   }
 }
 
+
 .action {
-  @include media-between(xs, lg) {
+  @include media-upto(lg) {
     display: none;
   }
 
@@ -81,21 +84,15 @@ header {
     font-size: 16px;
     color: $hero-text;
 
-    @include media-between(xs, lg) {
-      margin: 10px 0px;
+    @include media-upto(lg) {
+      margin-top: 10px;
       display: block;
     }
     
     @include media(lg) {
-      margin-left: 30px;
-    }
-  }
-
-  .login {
-    &:hover {
-      color: $primary-design;
-      border-bottom: 1px solid $primary-design;
-      transition: all 0.5s ease-out;
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
     }
   }
 
@@ -106,13 +103,23 @@ header {
   }
 }
 
+
+.login {
+  &:hover {
+    color: $primary-design;
+    border-bottom: 1px solid $primary-design;
+    transition: all 0.3s ease-out;
+  }
+}
+
+
 .hamburger-icon {
-  position: relative;
-  cursor: pointer;
   width: 25px;
   height: 20px;
   float: right;
-  margin-top: 5px;
+  position: relative;
+  transform: translateY(50%);
+  cursor: pointer;
 
   @include media(lg) {
     display: none;
@@ -141,8 +148,11 @@ header {
   }
 }
 
+
 .nav-active {
-  border-radius: 0px 0px 10px 10px;
+  @include media-upto(lg) {
+    border-radius: 0px 0px 10px 10px;
+  }
 
   .navbar {
     span {
@@ -159,13 +169,14 @@ header {
       }
     }
     
-    @include media-between(xs, lg) {
+    @include media-upto(lg) {
       nav, .action {
         display: block;
       }
     }
   }
 }
+
 
 .overlay-active {
   background-color: rgba(0, 0, 0,0.7);
@@ -174,8 +185,15 @@ header {
   width: 100%;
   z-index: 9;
   transition: all 0.3s ease-out;
+
+  @include media(lg) {
+    display: none;
+  }
 }
 
+
 .body-fixed {
-  overflow: hidden;
+  @include media-upto(lg) {
+    overflow: hidden;
+  }
 }

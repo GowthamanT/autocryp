@@ -102,15 +102,13 @@ header {
   background-color: #313a5a;
 }
 
-.navbar > a {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 40px;
-  display: inline-block;
-  color: #ffffff;
+@media screen and (min-width: 992px) {
+  .navbar {
+    text-align: center;
+  }
 }
 
-@media (min-width: 0) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .navbar nav {
     margin-top: 10px;
     display: none;
@@ -120,10 +118,6 @@ header {
 @media screen and (min-width: 992px) {
   .navbar nav {
     display: inline-block;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
@@ -133,9 +127,16 @@ header {
   display: table;
 }
 
-@media (min-width: 0) and (max-width: 991px) {
-  .primary-nav li {
-    margin-top: 10px;
+.company-logo {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  .company-logo {
+    float: left;
   }
 }
 
@@ -143,9 +144,6 @@ header {
   .primary-nav li {
     display: inline-block;
   }
-}
-
-@media screen and (min-width: 992px) {
   .primary-nav li:not(:first-child) {
     margin-left: 20px;
   }
@@ -160,11 +158,11 @@ header {
 .nav-link:hover {
   color: #1fdb84;
   border-bottom: 1px solid #1fdb84;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-@media (min-width: 0) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .action {
     display: none;
   }
@@ -182,24 +180,17 @@ header {
   color: #ffffff;
 }
 
-@media (min-width: 0) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .action a {
-    margin: 10px 0px;
+    margin-top: 10px;
     display: block;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .action a {
+  .action a:not(:first-child) {
     margin-left: 30px;
   }
-}
-
-.action .login:hover {
-  color: #1fdb84;
-  border-bottom: 1px solid #1fdb84;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 
 .action .btn {
@@ -208,13 +199,21 @@ header {
   text-align: center;
 }
 
+.login:hover {
+  color: #1fdb84;
+  border-bottom: 1px solid #1fdb84;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .hamburger-icon {
-  position: relative;
-  cursor: pointer;
   width: 25px;
   height: 20px;
   float: right;
-  margin-top: 5px;
+  position: relative;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {
@@ -247,8 +246,10 @@ header {
   bottom: 0;
 }
 
-.nav-active {
-  border-radius: 0px 0px 10px 10px;
+@media screen and (max-width: 991px) {
+  .nav-active {
+    border-radius: 0px 0px 10px 10px;
+  }
 }
 
 .nav-active .navbar span:first-child {
@@ -265,7 +266,7 @@ header {
           transform: rotate(-45deg) translate(3px, -9px);
 }
 
-@media (min-width: 0) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .nav-active .navbar nav, .nav-active .navbar .action {
     display: block;
   }
@@ -281,8 +282,16 @@ header {
   transition: all 0.3s ease-out;
 }
 
-.body-fixed {
-  overflow: hidden;
+@media screen and (min-width: 992px) {
+  .overlay-active {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .body-fixed {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -559,10 +568,6 @@ body {
   letter-spacing: 0.27px;
 }
 
-.pricing-card li {
-  margin-top: 10px;
-}
-
 .pricing-card .btn {
   text-transform: uppercase;
 }
@@ -601,6 +606,14 @@ body {
   transition: all 0.5s ease;
 }
 
+.pricing-features {
+  min-height: 200px;
+}
+
+.pricing-features li {
+  margin-top: 10px;
+}
+
 .yearly-offer p {
   font-size: 22px;
   line-height: 0.89;
@@ -621,5 +634,14 @@ body {
 
 .pricing-tab-active {
   display: block;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  bottom: 60px;
 }
 /*# sourceMappingURL=styles.css.map */

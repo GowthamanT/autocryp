@@ -268,10 +268,6 @@ body {
     letter-spacing: 0.27px;
   }
 
-  li {
-    margin-top: 10px;
-  }
-
   .btn {
     text-transform: uppercase;
   }
@@ -304,6 +300,14 @@ body {
   transition: all 0.5s ease;
 }
 
+.pricing-features {
+  min-height: 200px;
+  
+  li {
+    margin-top: 10px;
+  }
+}
+
 .yearly-offer {
   p {
     font-size: 22px;
@@ -330,4 +334,13 @@ body {
 
 .pricing-tab-active {
   display: block;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  bottom: 60px;
 }
