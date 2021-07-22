@@ -24,26 +24,58 @@ function closeNavbar() {
   body.classList.remove('body-fixed');
 }
 
+
+
+
+
 // Pricing Tab
 
-var monthPlan = document.querySelector('.monthly');
-var yearPlan = document.querySelector('.yearly');
+var pricingPlans = document.querySelectorAll('.js-plan');
 var pricingTabs = document.querySelectorAll('.pricing-tabs');
-// console.log(pricingTabs);
 
-monthPlan.addEventListener('click',activateMonthlyPlan);
-yearPlan.addEventListener('click',activateYearlyPlan);
+pricingPlans.forEach( (plan,index) => {
+  plan.addEventListener('click', function() {
+    pricingPlanChange(index);
+  }, false);
+});
 
-function activateMonthlyPlan() {
-  monthPlan.classList.add('pricing-plan-active');
-  yearPlan.classList.remove('pricing-plan-active');
-  pricingTabs[0].classList.add('pricing-tab-active');
-  pricingTabs[1].classList.remove('pricing-tab-active');
+function pricingPlanChange(plan) {
+  for(let i=0; i<pricingPlans.length; i++) {
+    if(i == plan) {
+      pricingPlans[i].classList.add('pricing-plan-active');
+      pricingTabs[i].classList.add('pricing-tab-active');
+    }
+    else {
+      pricingPlans[i].classList.remove('pricing-plan-active');
+      pricingTabs[i].classList.remove('pricing-tab-active');
+    }
+  }
 }
 
-function activateYearlyPlan() {
-  monthPlan.classList.remove('pricing-plan-active');
-  yearPlan.classList.add('pricing-plan-active');
-  pricingTabs[0].classList.remove('pricing-tab-active');
-  pricingTabs[1].classList.add('pricing-tab-active');
+
+
+
+
+// Carousel
+
+var carousel = document.querySelector('.carousel');
+var indicators = document.querySelectorAll('.indicator');
+
+indicators.forEach( (ind, index) => {
+  ind.addEventListener('click', function() {
+    slide(index);
+  }, false);
+});
+
+function slide(count) {
+  for(let i=0; i<indicators.length ;i++) {
+    if(i == count) {
+      carousel.classList.add('slide' + i);
+      indicators[i].classList.add('indicator-active');
+    }
+    else {
+      carousel.classList.remove('slide' + i);
+      indicators[i].classList.remove('indicator-active');
+    }
+  }
 }
