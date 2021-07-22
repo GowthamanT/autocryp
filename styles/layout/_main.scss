@@ -171,10 +171,6 @@ body {
 // Pricing Section
 
 .pricing-wrapper {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  text-align: center;
-
   h2 {
     color: $primary-subheading--pricing;
     font-size: 40px;
@@ -188,14 +184,13 @@ body {
 
 
 .pricing-plan {
-  margin-top: 50px;
   display: inline-block;
   border-radius: 5px;
   background-color: $pricing-tab-background;
   text-transform: uppercase;
   font-size: 0;
 
-  @include media-utpo(sm) {
+  @include media-upto(sm) {
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -232,7 +227,6 @@ body {
 
 
 .pricing-tabs {
-  padding-top: 20px;
   display: none;
 
   > ul {
@@ -241,6 +235,7 @@ body {
     }
   }
 }
+
 
 .pricing-card { 
   display: inline-block;
@@ -273,6 +268,7 @@ body {
   }
 }
 
+
 .cost {
   font-size: 72px;
   line-height: 0.89;
@@ -283,12 +279,14 @@ body {
   }
 }
 
+
 .pricing-card-active {
   background-color: white;
   border-top: 2px solid $card-border-top;
   box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
   transition: all 0.5s ease;
 }
+
 
 .pricing-features {
   min-height: 200px;
@@ -297,6 +295,7 @@ body {
     margin-top: 10px;
   }
 }
+
 
 .yearly-offer {
   p {
@@ -322,15 +321,49 @@ body {
   }
 }
 
+
 .pricing-tab-active {
   display: block;
 }
 
-.btn-wrapper {
-  position: relative;
+
+
+
+
+// Client Section
+
+.client-wrapper {
+  h2 {
+    font-size: 16px;
+    color: $primary-subheading;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
-.test {
-  position: absolute;
-  bottom: 60px;
+
+.client-list {
+  li {
+    @include media(sm) {
+      display: inline-block;
+      
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+
+.client-icon {
+  height: 70px;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
