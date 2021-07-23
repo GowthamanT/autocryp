@@ -487,6 +487,27 @@ header {
   }
 }
 
+.footer-nav a:hover {
+  color: #1fdb84;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 575px) {
+  .footer-nav a {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .footer-nav a:not(:last-child)::after {
+    content: "/";
+    margin: 0px 20px;
+    color: #5b6c94;
+  }
+}
+
 body {
   background-color: #f8f9fc;
 }
@@ -867,26 +888,5 @@ body {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.footer-nav a:hover {
-  color: #1fdb84;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-@media screen and (max-width: 575px) {
-  .footer-nav a {
-    display: block;
-    margin-top: 10px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .footer-nav a:not(:last-child)::after {
-    content: "/";
-    margin: 0px 20px;
-    color: #5b6c94;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

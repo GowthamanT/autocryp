@@ -409,33 +409,3 @@ body {
     object-fit: contain;
   }
 }
-
-
-
-
-
-// Footer
-
-.footer-nav {
-  a {
-    &:hover {
-      color: $primary-design;
-      transition: 0.3s ease;
-    }
-
-    @include media-upto(sm) {
-      display: block;
-      margin-top: 10px;
-    }
-
-    @include media(sm) {
-      &:not(:last-child) {
-        &::after {
-          content: "/";
-          margin: 0px 20px;
-          color: $primary-text;
-        }
-      }
-    } 
-  }
-}
