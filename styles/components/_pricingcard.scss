@@ -1,0 +1,39 @@
+
+.pricing-card { 
+  display: inline-block;
+  padding: 60px 40px;
+  margin-top: 30px;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: initial;
+  overflow-wrap: break-word;
+
+  @include media(lg) {
+    width: calc(100% / 3);
+  }
+
+  &:hover {
+    background-color: white;
+    border-top: 2px solid $card-border-top;
+    box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  }
+}
+
+
+.cost {
+  font-size: 72px;
+  line-height: 0.89;
+  color: $primary-design;
+
+  @include media-upto(lg) {
+    font-size: 50px;
+  }
+}
+
+
+.pricing-card-active {
+  background-color: white;
+  border-top: 2px solid $card-border-top;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  transition: all 0.5s ease;
+}

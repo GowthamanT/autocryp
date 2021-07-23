@@ -32,21 +32,3 @@
 .text-center {
   text-align: center;
 }
-
-.btn {
-  background-color: $primary-design;
-  color:  $hero-text;
-  font-size: 16px;
-  display: inline-block;
-  padding: 20px 45px;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-  transition: all 0.6s ease;
-}
-
-.content {
-  font-size: 16px;
-  line-height: 2;
-  color: $primary-text;
-}

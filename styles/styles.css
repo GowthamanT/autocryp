@@ -14,7 +14,6 @@ html {
 
 body {
   line-height: 1;
-  font-family: "Rubik", sans-serif;
 }
 
 ul {
@@ -28,6 +27,29 @@ a {
 
 figure img {
   vertical-align: top;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.2;
+  color: #031d5b;
+}
+
+.sub-title {
+  color: #32325c;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.27px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 2;
+  color: #5b6c94;
 }
 
 .container {
@@ -116,10 +138,153 @@ figure img {
   transition: all 0.6s ease;
 }
 
-.content {
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: 350px;
+  padding: 40px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+          box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+}
+
+.author {
   font-size: 16px;
+  font-weight: bold;
   line-height: 2;
-  color: #5b6c94;
+  color: #031d5b;
+}
+
+.author-company {
+  opacity: 0.4;
+}
+
+.card-active {
+  background-color: #1fdb84;
+  -webkit-box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+          box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+}
+
+.card-active .content,
+.card-active .author {
+  color: white;
+}
+
+.card-active .author-company {
+  opacity: 0.8;
+}
+
+.pricing-card {
+  display: inline-block;
+  padding: 60px 40px;
+  margin-top: 30px;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: initial;
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 992px) {
+  .pricing-card {
+    width: calc(100% / 3);
+  }
+}
+
+.pricing-card:hover {
+  background-color: white;
+  border-top: 2px solid #0a8aff;
+  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+}
+
+.cost {
+  font-size: 72px;
+  line-height: 0.89;
+  color: #1fdb84;
+}
+
+@media screen and (max-width: 991px) {
+  .cost {
+    font-size: 50px;
+  }
+}
+
+.pricing-card-active {
+  background-color: white;
+  border-top: 2px solid #0a8aff;
+  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.carousel-container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0;
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-container {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel-container {
+    margin-left: -150px;
+  }
+}
+
+.carousel-indicators {
+  margin-top: 230px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-indicators {
+    display: none;
+  }
+}
+
+.indicator {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.indicator-active {
+  background-color: white;
+}
+
+.slide0 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.slide1 {
+  -webkit-transform: translateX(-740px);
+          transform: translateX(-740px);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.slide2 {
+  -webkit-transform: translateX(-1480px);
+          transform: translateX(-1480px);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 header {
@@ -364,7 +529,7 @@ body {
   }
 }
 
-.hero-content p {
+.hero-content .content {
   color: #ffffff;
 }
 
@@ -463,10 +628,8 @@ body {
   }
 }
 
-.benefit-content h2 {
+.benefit-content .title {
   font-size: 18px;
-  font-weight: 500;
-  color: #031d5b;
 }
 
 .benefit-icon {
@@ -490,14 +653,13 @@ body {
   background-color: #1fdb84;
 }
 
-.pricing-wrapper h2 {
+.pricing-wrapper .title {
   color: #32325c;
-  font-size: 40px;
   line-height: 1.6;
 }
 
 @media screen and (max-width: 991px) {
-  .pricing-wrapper h2 {
+  .pricing-wrapper .title {
     font-size: 30px;
   }
 }
@@ -559,59 +721,8 @@ body {
   }
 }
 
-.pricing-card {
-  display: inline-block;
-  padding: 60px 40px;
-  margin-top: 30px;
-  vertical-align: top;
-  cursor: pointer;
-  font-size: initial;
-  overflow-wrap: break-word;
-}
-
-.pricing-card h3 {
-  color: #32325c;
-  font-size: 24px;
-  line-height: 1.33;
-  letter-spacing: 0.27px;
-}
-
 .pricing-card .btn {
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 992px) {
-  .pricing-card {
-    width: calc(100% / 3);
-  }
-}
-
-.pricing-card:hover {
-  background-color: white;
-  border-top: 2px solid #0a8aff;
-  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-}
-
-.cost {
-  font-size: 72px;
-  line-height: 0.89;
-  color: #1fdb84;
-}
-
-@media screen and (max-width: 991px) {
-  .cost {
-    font-size: 50px;
-  }
-}
-
-.pricing-card-active {
-  background-color: white;
-  border-top: 2px solid #0a8aff;
-  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 .pricing-features {
@@ -651,7 +762,7 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .testimonial-topic {
+  .testimonial-head {
     position: relative;
     width: 32%;
     margin-top: 30px;
@@ -659,16 +770,14 @@ body {
   }
 }
 
-.testimonial-topic h2 {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #031d5b;
+@media screen and (max-width: 991px) {
+  .testimonial-head .title {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .testimonial-topic h2 {
-    font-size: 40px;
+  .testimonial-head .title {
     margin-top: 40px;
     margin-left: 20px;
     text-align: left;
@@ -708,39 +817,9 @@ body {
   }
 }
 
-.carousel-container {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  white-space: nowrap;
-  font-size: 0;
-  overflow: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .carousel-container {
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .carousel-container {
-    margin-left: -150px;
-  }
-}
-
 .card {
-  display: inline-block;
-  vertical-align: top;
-  width: 350px;
-  padding: 40px;
-  border-radius: 6px;
   font-size: initial;
   white-space: normal;
-  background-color: rgba(255, 255, 255, 0.95);
-  -webkit-box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
-          box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
 }
 
 .card:not(:last-child) {
@@ -758,85 +837,12 @@ body {
   -webkit-box-orient: vertical;
 }
 
-.author {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 2;
-  color: #031d5b;
-}
-
-.author-company {
-  opacity: 0.4;
-}
-
-.card-active {
-  background-color: #1fdb84;
-  -webkit-box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
-          box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
-}
-
 .card-active .card-design img {
   content: url("https://gowthamant.github.io/autocryp/assets/images/group-6.svg");
 }
 
-.card-active .content,
-.card-active .author {
-  color: white;
-}
-
-.card-active .author-company {
-  opacity: 0.8;
-}
-
-.carousel-indicators {
-  margin-top: 230px;
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .carousel-indicators {
-    display: none;
-  }
-}
-
-.indicator {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.indicator-active {
-  background-color: white;
-}
-
-.slide0 {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.slide1 {
-  -webkit-transform: translateX(-740px);
-          transform: translateX(-740px);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.slide2 {
-  -webkit-transform: translateX(-1480px);
-          transform: translateX(-1480px);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.client-wrapper h2 {
+.client-wrapper .title {
   font-size: 16px;
-  color: #031d5b;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;

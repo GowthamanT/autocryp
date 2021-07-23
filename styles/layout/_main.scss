@@ -36,7 +36,7 @@ body {
     width: 50%;
   }
 
-  p {
+  .content {
     color: $hero-text;
   }
 }
@@ -133,10 +133,9 @@ body {
     }
   }
 
-  h2 {
+  .title {
     font-size: 18px;
-    font-weight: 500;
-    color: $primary-subheading;
+    // font-weight: 500;
   }
 }
 
@@ -171,9 +170,8 @@ body {
 // Pricing Section
 
 .pricing-wrapper {
-  h2 {
+  .title {
     color: $primary-subheading--pricing;
-    font-size: 40px;
     line-height: 1.6;
 
     @include media-upto(lg) {
@@ -238,53 +236,9 @@ body {
 
 
 .pricing-card { 
-  display: inline-block;
-  padding: 60px 40px;
-  margin-top: 30px;
-  vertical-align: top;
-  cursor: pointer;
-  font-size: initial;
-  overflow-wrap: break-word;
-
-  h3 {
-    color: $primary-subheading--pricing;
-    font-size: 24px;
-    line-height: 1.33;
-    letter-spacing: 0.27px;
-  }
-
   .btn {
     text-transform: uppercase;
   }
-
-  @include media(lg) {
-    width: calc(100% / 3);
-  }
-
-  &:hover {
-    background-color: white;
-    border-top: 2px solid $card-border-top;
-    box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-  }
-}
-
-
-.cost {
-  font-size: 72px;
-  line-height: 0.89;
-  color: $primary-design;
-
-  @include media-upto(lg) {
-    font-size: 50px;
-  }
-}
-
-
-.pricing-card-active {
-  background-color: white;
-  border-top: 2px solid $card-border-top;
-  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-  transition: all 0.5s ease;
 }
 
 
@@ -340,7 +294,7 @@ body {
   }
 }
 
-.testimonial-topic {
+.testimonial-head {
   @include media(lg) {
     position: relative;
     width: 32%;
@@ -348,14 +302,12 @@ body {
     float: left;
   }
 
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1.2;
-    color: $primary-subheading;
+  .title {
+    @include media-upto(lg) {
+      font-size: 30px;
+    }
 
     @include media(lg) {
-      font-size: 40px;
       margin-top: 40px;
       margin-left: 20px;
       text-align: left;
@@ -391,33 +343,9 @@ body {
   }
 }
 
-.carousel-container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  font-size: 0;
-  overflow: auto;
-  
-  @include media(md) {
-    overflow: hidden;
-  }
-
-  @include media(lg) {
-    margin-left: -150px;
-  }
-}
-
 .card {
-  display: inline-block;
-  vertical-align: top;
-  width: 350px;
-  padding: 40px;
-  border-radius: 6px;
   font-size: initial;
   white-space: normal;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
   
   &:not(:last-child) {
     margin-right: 20px;
@@ -434,74 +362,12 @@ body {
   }
 }
 
-.author { 
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 2;
-  color: $primary-subheading;
-}
-
-.author-company {
-  opacity: 0.4;
-}
-
 .card-active {
-  background-color: $primary-design;
-  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
-
   .card-design {
     img {
       content: url('https://gowthamant.github.io/autocryp/assets/images/group-6.svg');
     }
   }
-
-  .content, 
-  .author {
-    color:white;
-  }
-
-  .author-company {
-    opacity: 0.8;
-  }
-}
-
-
-.carousel-indicators {
-  margin-top: 230px;
-  text-align: center;
-
-  @include media-upto(md) {
-    display: none;
-  }
-}
-
-.indicator {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.indicator-active {
-  background-color: white;
-}
-
-.slide0 {
-  transform: translateX(0);
-  transition: 0.5s ease;
-}
-
-.slide1 {
-  transform: translateX(-740px);
-  transition: 0.5s ease;
-}
-
-.slide2 {
-  transform: translateX(-1480px);
-  transition: 0.5s ease;
 }
 
 
@@ -511,9 +377,8 @@ body {
 // Client Section
 
 .client-wrapper {
-  h2 {
+  .title {
     font-size: 16px;
-    color: $primary-subheading;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;

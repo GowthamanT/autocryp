@@ -1,0 +1,55 @@
+
+.carousel-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0;
+  overflow: auto;
+  
+  @include media(md) {
+    overflow: hidden;
+  }
+
+  @include media(lg) {
+    margin-left: -150px;
+  }
+}
+
+.carousel-indicators {
+  margin-top: 230px;
+  text-align: center;
+
+  @include media-upto(md) {
+    display: none;
+  }
+}
+
+.indicator {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.indicator-active {
+  background-color: white;
+}
+
+.slide0 {
+  transform: translateX(0);
+  transition: 0.5s ease;
+}
+
+.slide1 {
+  transform: translateX(-740px);
+  transition: 0.5s ease;
+}
+
+.slide2 {
+  transform: translateX(-1480px);
+  transition: 0.5s ease;
+}
