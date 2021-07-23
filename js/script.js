@@ -5,24 +5,24 @@ var body = document.querySelector('body');
 var navbarIcon = document.querySelector('.hamburger-icon');
 var navLinks = document.querySelectorAll('.nav-link');
 
-navbarIcon.addEventListener('click', showHideNavbar);
-overlay.addEventListener('click', showHideNavbar);
-
-navLinks.forEach(links => {
-  links.addEventListener('click', closeNavbar);
-});
-
-function showHideNavbar() {
+function toggleNavbar() {
   header.classList.toggle('nav-active');
   overlay.classList.toggle('overlay-active');
   body.classList.toggle('body-fixed');
 }
 
-function closeNavbar() {
+function closeMobileNavbar() {
   header.classList.remove('nav-active');
   overlay.classList.remove('overlay-active');
   body.classList.remove('body-fixed');
 }
+
+navbarIcon.addEventListener('click', toggleNavbar);
+overlay.addEventListener('click', toggleNavbar);
+
+navLinks.forEach(links => {
+  links.addEventListener('click', closeMobileNavbar);
+});
 
 
 
@@ -32,12 +32,6 @@ function closeNavbar() {
 
 var pricingPlans = document.querySelectorAll('.js-plan');
 var pricingTabs = document.querySelectorAll('.pricing-tabs');
-
-pricingPlans.forEach( (plan,index) => {
-  plan.addEventListener('click', function() {
-    pricingPlanChange(index);
-  }, false);
-});
 
 function pricingPlanChange(plan) {
   for(let i=0; i<pricingPlans.length; i++) {
@@ -52,6 +46,12 @@ function pricingPlanChange(plan) {
   }
 }
 
+pricingPlans.forEach( (plan,index) => {
+  plan.addEventListener('click', function() {
+    pricingPlanChange(index);
+  }, false);
+});
+
 
 
 
@@ -59,23 +59,46 @@ function pricingPlanChange(plan) {
 // Carousel
 
 var carousel = document.querySelector('.carousel');
+var cards = document.querySelectorAll('.card');
+var carouselIndicatorContainer = document.querySelector('.carousel-indicators');
+
+function createIndicator() {
+  let indicator = document.createElement('span');
+  indicator.classList.add('indicator');
+  
+  carouselIndicatorContainer.append(indicator);
+}
+
+for(let i=0; i<cards.length; i++) {
+  createIndicator();
+}
+
+
+
+
 var indicators = document.querySelectorAll('.indicator');
+
+const moveDistance = 370;
+indicators[0].classList.add('indicator-active');
+
+
+function slideToCard(count) {
+  let slideDistance = count * moveDistance;
+  carousel.style.transform = "translateX(-" + slideDistance + "px)";
+  carousel.style.transition = "0.5s ease";
+  indicators.forEach(indicator => {
+    if(indicator == indicators[count]) {
+      indicator.classList.add('indicator-active');
+    }
+    else {
+      indicator.classList.remove('indicator-active');
+    }
+  });
+}
+
 
 indicators.forEach( (ind, index) => {
   ind.addEventListener('click', function() {
-    slide(index);
+    slideToCard(index);
   }, false);
 });
-
-function slide(count) {
-  for(let i=0; i<indicators.length ;i++) {
-    if(i == count) {
-      carousel.classList.add('slide' + i);
-      indicators[i].classList.add('indicator-active');
-    }
-    else {
-      carousel.classList.remove('slide' + i);
-      indicators[i].classList.remove('indicator-active');
-    }
-  }
-}

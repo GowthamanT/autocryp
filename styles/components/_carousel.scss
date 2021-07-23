@@ -5,11 +5,7 @@
   transform: translateY(-50%);
   white-space: nowrap;
   font-size: 0;
-  overflow: auto;
-  
-  @include media(md) {
-    overflow: hidden;
-  }
+  overflow: hidden;
 
   @include media(lg) {
     margin-left: -150px;
@@ -19,10 +15,6 @@
 .carousel-indicators {
   margin-top: 230px;
   text-align: center;
-
-  @include media-upto(md) {
-    display: none;
-  }
 }
 
 .indicator {
@@ -37,19 +29,4 @@
 
 .indicator-active {
   background-color: white;
-}
-
-.slide0 {
-  transform: translateX(0);
-  transition: 0.5s ease;
-}
-
-.slide1 {
-  transform: translateX(-740px);
-  transition: 0.5s ease;
-}
-
-.slide2 {
-  transform: translateX(-1480px);
-  transition: 0.5s ease;
 }

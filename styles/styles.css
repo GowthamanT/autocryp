@@ -226,13 +226,7 @@ body {
           transform: translateY(-50%);
   white-space: nowrap;
   font-size: 0;
-  overflow: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .carousel-container {
-    overflow: hidden;
-  }
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -244,12 +238,6 @@ body {
 .carousel-indicators {
   margin-top: 230px;
   text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .carousel-indicators {
-    display: none;
-  }
 }
 
 .indicator {
@@ -264,27 +252,6 @@ body {
 
 .indicator-active {
   background-color: white;
-}
-
-.slide0 {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.slide1 {
-  -webkit-transform: translateX(-740px);
-          transform: translateX(-740px);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.slide2 {
-  -webkit-transform: translateX(-1480px);
-          transform: translateX(-1480px);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
 }
 
 header {
