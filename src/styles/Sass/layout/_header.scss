@@ -23,12 +23,6 @@ header {
       display: inline-block;
     }
   }
-
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 }
 
 

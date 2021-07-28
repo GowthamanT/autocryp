@@ -11,3 +11,11 @@ $pricing-tab-border: #aefdd9;
 $pricing-tab-text: #6fdeaa;
 $pricing-tab-background: #f1fff8;
 $card-border-top: #0a8aff;
+
+$media-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

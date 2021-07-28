@@ -2,9 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -132,9 +130,7 @@ body {
   padding: 20px 45px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  -webkit-box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-          box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
-  -webkit-transition: all 0.6s ease;
+  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
   transition: all 0.6s ease;
 }
 
@@ -145,8 +141,7 @@ body {
   padding: 40px;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.95);
-  -webkit-box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
-          box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
 }
 
 .author {
@@ -162,15 +157,12 @@ body {
 
 .card-active {
   background-color: #1fdb84;
-  -webkit-box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
-          box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
 }
-
 .card-active .content,
 .card-active .author {
   color: white;
 }
-
 .card-active .author-company {
   opacity: 0.8;
 }
@@ -184,18 +176,15 @@ body {
   font-size: initial;
   overflow-wrap: break-word;
 }
-
 @media screen and (min-width: 992px) {
   .pricing-card {
     width: calc(100% / 3);
   }
 }
-
 .pricing-card:hover {
   background-color: white;
   border-top: 2px solid #0a8aff;
-  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
 }
 
 .cost {
@@ -203,7 +192,6 @@ body {
   line-height: 0.89;
   color: #1fdb84;
 }
-
 @media screen and (max-width: 991px) {
   .cost {
     font-size: 50px;
@@ -213,22 +201,18 @@ body {
 .pricing-card-active {
   background-color: white;
   border-top: 2px solid #0a8aff;
-  -webkit-box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-          box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
-  -webkit-transition: all 0.5s ease;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
   transition: all 0.5s ease;
 }
 
 .carousel-container {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   white-space: nowrap;
   font-size: 0;
   overflow: hidden;
 }
-
 @media screen and (min-width: 992px) {
   .carousel-container {
     margin-left: -150px;
@@ -267,24 +251,16 @@ header {
     text-align: center;
   }
 }
-
 @media screen and (max-width: 991px) {
   .navbar nav {
     margin-top: 10px;
     display: none;
   }
 }
-
 @media screen and (min-width: 992px) {
   .navbar nav {
     display: inline-block;
   }
-}
-
-.navbar::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .company-logo {
@@ -293,7 +269,6 @@ header {
   line-height: 40px;
   color: #ffffff;
 }
-
 @media screen and (min-width: 992px) {
   .company-logo {
     float: left;
@@ -314,11 +289,9 @@ header {
   line-height: 40px;
   color: #ffffff;
 }
-
 .nav-link:hover {
   color: #1fdb84;
   border-bottom: 1px solid #1fdb84;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -327,32 +300,27 @@ header {
     display: none;
   }
 }
-
 @media screen and (min-width: 992px) {
   .action {
     float: right;
   }
 }
-
 .action a {
   line-height: 28px;
   font-size: 16px;
   color: #ffffff;
 }
-
 @media screen and (max-width: 991px) {
   .action a {
     margin-top: 10px;
     display: block;
   }
 }
-
 @media screen and (min-width: 992px) {
   .action a:not(:first-child) {
     margin-left: 30px;
   }
 }
-
 .action .btn {
   padding: 6px 25px;
   max-width: 300px;
@@ -362,7 +330,6 @@ header {
 .login:hover {
   color: #1fdb84;
   border-bottom: 1px solid #1fdb84;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -371,37 +338,29 @@ header {
   height: 20px;
   float: right;
   position: relative;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
   cursor: pointer;
 }
-
 @media screen and (min-width: 992px) {
   .hamburger-icon {
     display: none;
   }
 }
-
 .hamburger-icon span {
   position: absolute;
   display: inline-block;
   height: 3px;
   width: 100%;
-  -webkit-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   background-color: white;
 }
-
 .hamburger-icon span:first-child {
   top: 0;
 }
-
 .hamburger-icon span:nth-child(2) {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .hamburger-icon span:last-child {
   bottom: 0;
 }
@@ -411,21 +370,15 @@ header {
     border-radius: 0px 0px 10px 10px;
   }
 }
-
 .nav-active .navbar span:first-child {
-  -webkit-transform: rotate(45deg) translate(3px, 9px);
-          transform: rotate(45deg) translate(3px, 9px);
+  transform: rotate(45deg) translate(3px, 9px);
 }
-
 .nav-active .navbar span:nth-child(2) {
   opacity: 0;
 }
-
 .nav-active .navbar span:last-child {
-  -webkit-transform: rotate(-45deg) translate(3px, -9px);
-          transform: rotate(-45deg) translate(3px, -9px);
+  transform: rotate(-45deg) translate(3px, -9px);
 }
-
 @media screen and (max-width: 991px) {
   .nav-active .navbar nav, .nav-active .navbar .action {
     display: block;
@@ -438,10 +391,8 @@ header {
   height: 100%;
   width: 100%;
   z-index: 9;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-
 @media screen and (min-width: 992px) {
   .overlay-active {
     display: none;
@@ -456,17 +407,14 @@ header {
 
 .footer-nav a:hover {
   color: #1fdb84;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 @media screen and (max-width: 575px) {
   .footer-nav a {
     display: block;
     margin-top: 10px;
   }
 }
-
 @media screen and (min-width: 576px) {
   .footer-nav a:not(:last-child)::after {
     content: "/";
@@ -482,20 +430,17 @@ body {
 .hero-wrapper {
   background-color: #313a5a;
 }
-
 @media screen and (max-width: 991px) {
   .hero-wrapper {
     padding-top: 150px;
   }
 }
-
 @media screen and (min-width: 992px) {
   .hero-wrapper {
     height: 100vh;
     max-height: 850px;
   }
 }
-
 .hero-wrapper .container {
   height: 100%;
 }
@@ -505,18 +450,15 @@ body {
     text-align: center;
   }
 }
-
 @media screen and (min-width: 992px) {
   .hero-content {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     display: inline-block;
     width: 50%;
   }
 }
-
 .hero-content .content {
   color: #ffffff;
 }
@@ -526,7 +468,6 @@ body {
   font-weight: bold;
   color: #ffffff;
 }
-
 @media screen and (max-width: 767px) {
   .primary-heading {
     font-size: 35px;
@@ -537,21 +478,18 @@ body {
   font-size: 18px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
-          box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
+  box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
 }
 
 .hero-img {
   display: block;
   height: 100%;
 }
-
 @media screen and (max-width: 991px) {
   .hero-img {
     margin-top: 30px;
   }
 }
-
 @media screen and (min-width: 992px) {
   .hero-img {
     width: 50%;
@@ -559,14 +497,11 @@ body {
     position: relative;
   }
 }
-
 .hero-img img {
   height: 50vh;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
-
 @media screen and (min-width: 992px) {
   .hero-img img {
     height: 85%;
@@ -580,13 +515,10 @@ body {
   color: #ffffff;
   padding: 20px 40px 40px;
   border-radius: 10px;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
-  -webkit-box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
-          box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  transform: translateY(-50px);
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
   border-top: 1px solid #ffffff;
 }
-
 @media screen and (max-width: 991px) {
   .benefit-wrapper .container {
     margin-right: 20px;
@@ -603,7 +535,6 @@ body {
    * and 8px of inline block whitespace between elements.
    */
 }
-
 @media screen and (min-width: 992px) {
   .benefit-content {
     margin-top: 20px;
@@ -615,7 +546,6 @@ body {
     margin-right: 20px;
   }
 }
-
 .benefit-content .title {
   font-size: 18px;
 }
@@ -629,7 +559,6 @@ body {
   border-radius: 6px;
   padding: 15px 20px;
 }
-
 .benefit-icon img {
   vertical-align: middle;
   width: 100%;
@@ -645,7 +574,6 @@ body {
   color: #32325c;
   line-height: 1.6;
 }
-
 @media screen and (max-width: 991px) {
   .pricing-wrapper .title {
     font-size: 30px;
@@ -659,14 +587,12 @@ body {
   text-transform: uppercase;
   font-size: 0;
 }
-
 @media screen and (max-width: 575px) {
   .pricing-plan {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
-
 .pricing-plan a {
   display: inline-block;
   padding: 21px 30px;
@@ -676,18 +602,15 @@ body {
   letter-spacing: 2px;
   border: 1px solid #aefdd9;
 }
-
 @media screen and (max-width: 575px) {
   .pricing-plan a {
     margin-top: 10px;
   }
 }
-
 .pricing-plan a:hover {
   background-color: white;
   color: #1fdb84;
   border: 1px solid #1fdb84;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -695,14 +618,12 @@ body {
   background-color: white;
   color: #1fdb84;
   border: 1px solid #1fdb84;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .pricing-tabs {
   display: none;
 }
-
 @media screen and (min-width: 992px) {
   .pricing-tabs > ul {
     font-size: 0;
@@ -716,7 +637,6 @@ body {
 .pricing-features {
   min-height: 200px;
 }
-
 .pricing-features li {
   margin-top: 10px;
 }
@@ -730,11 +650,9 @@ body {
 .pricing-yearly .pricing-card .cost {
   font-size: 62px;
 }
-
 .pricing-yearly .pricing-card:hover {
   border-top: 2px solid pink;
 }
-
 .pricing-yearly .pricing-card-active {
   border-top: 2px solid pink;
 }
@@ -757,13 +675,11 @@ body {
     float: left;
   }
 }
-
 @media screen and (max-width: 991px) {
   .testimonial-head .title {
     font-size: 30px;
   }
 }
-
 @media screen and (min-width: 992px) {
   .testimonial-head .title {
     margin-top: 40px;
@@ -775,13 +691,11 @@ body {
 .top-design {
   position: absolute;
 }
-
 @media screen and (max-width: 991px) {
   .top-design {
     display: none;
   }
 }
-
 .top-design img {
   width: 100%;
 }
@@ -791,14 +705,12 @@ body {
   height: 800px;
   position: relative;
 }
-
 @media screen and (min-width: 992px) {
   .testimonial-wrapper {
     width: 60%;
     float: right;
   }
 }
-
 @media screen and (max-width: 991px) {
   .testimonial-wrapper {
     margin-top: 30px;
@@ -809,11 +721,9 @@ body {
   font-size: initial;
   white-space: normal;
 }
-
 .card:not(:last-child) {
   margin-right: 20px;
 }
-
 .card .content {
   height: 200px;
   overflow: hidden;
@@ -846,14 +756,11 @@ body {
 }
 
 .client-icon {
-  height: 70px;
+  height: 50px;
+  line-height: 50px;
   display: inline-block;
 }
-
 .client-icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  vertical-align: middle;
+  object-fit: contain;
 }
-/*# sourceMappingURL=styles.css.map */
